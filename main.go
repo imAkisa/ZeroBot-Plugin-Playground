@@ -45,6 +45,8 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin-Playground/plugin/vote"
 	_ "github.com/FloatTech/ZeroBot-Plugin-Playground/plugin/wantquotes"
 	_ "github.com/FloatTech/ZeroBot-Plugin-Playground/plugin/youdaotranslate"
+	_ "github.com/FloatTech/ZeroBot-Plugin-Playground/plugin/autowithdraw"
+	_ "github.com/FloatTech/ZeroBot-Plugin-Playground/plugin/delreply"
 
 	// 程序主体
 	zero "github.com/wdvxdr1123/ZeroBot"
@@ -62,7 +64,7 @@ func init() {
 	sus := make([]int64, 0, 16)
 	// 解析命令行参数
 	d := flag.Bool("d", false, "Enable debug level log and higher.")
-	w := flag.Bool("w", false, "Enable warning level log and higher.")
+	w := flag.Bool("w", true, "Enable warning level log and higher.")
 	h := flag.Bool("h", false, "Display this help.")
 	// 直接写死 AccessToken 时，请更改下面第二个参数
 	token := flag.String("t", "", "Set AccessToken of WSClient.")
